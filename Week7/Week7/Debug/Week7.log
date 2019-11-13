@@ -1,0 +1,15 @@
+﻿  Source.cpp
+c:\users\sacammack\documents\github\sec204-labs\week7\week7\source.cpp(97): warning C4101: 'num6': unreferenced local variable
+c:\users\sacammack\documents\github\sec204-labs\week7\week7\source.cpp(97): warning C4101: 'num2': unreferenced local variable
+c:\users\sacammack\documents\github\sec204-labs\week7\week7\source.cpp(97): warning C4101: 'num5': unreferenced local variable
+c:\users\sacammack\documents\github\sec204-labs\week7\week7\source.cpp(118): warning C4101: 'ymm5': unreferenced local variable
+c:\users\sacammack\documents\github\sec204-labs\week7\week7\source.cpp(118): warning C4101: 'ymm6': unreferenced local variable
+c:\users\sacammack\documents\github\sec204-labs\week7\week7\source.cpp(118): warning C4101: 'num2': unreferenced local variable
+c:\users\sacammack\documents\github\sec204-labs\week7\week7\source.cpp(118): warning C4101: 'num3': unreferenced local variable
+c:\users\sacammack\documents\github\sec204-labs\week7\week7\source.cpp(118): warning C4101: 'ymm1': unreferenced local variable
+c:\users\sacammack\documents\github\sec204-labs\week7\week7\source.cpp(118): warning C4101: 'ymm0': unreferenced local variable
+c:\users\sacammack\documents\github\sec204-labs\week7\week7\source.cpp(119): warning C4101: 'xmm1': unreferenced local variable
+c:\users\sacammack\documents\github\sec204-labs\week7\week7\source.cpp(118): warning C4101: 'ymm4': unreferenced local variable
+c:\users\sacammack\documents\github\sec204-labs\week7\week7\source.cpp(118): warning C4101: 'num4': unreferenced local variable
+c:\users\sacammack\documents\github\sec204-labs\week7\week7\source.cpp(118): warning C4101: 'ymm3': unreferenced local variable
+  Week7.vcxproj -> C:\Users\sacammack\Documents\GitHub\SEC204-Labs\Week7\Debug\Week7.exe

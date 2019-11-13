@@ -2,3 +2,7 @@
 *.db
 *.opendb
 *.ipch
+*.exe
+*.tlog
+*.idb
+*.pdb

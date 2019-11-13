@@ -10,7 +10,7 @@
 
 #define M 8000
 
-__declspec(align(64)) float  X[M], Y[M], A[M][M], X2[M], Y2[M];
+__declspec(align(64)) float  X[M], Y[M], A[M][M], B[M][M], C[M][M], X2[M], Y2[M];
 
 void initialization();
 void MVM_default();
@@ -41,16 +41,18 @@ int main() {
 	//clock_t start_1, end_1;
 
 	//start_1 = clock();
+	std::cout << "Starting routines... \n";
 	auto start = std::chrono::high_resolution_clock::now();
 
 	//run this 10 times because this routine runs very fast 
 	//The execution time needs to be at least some seconds in order to have a good measurement (why?) 
 	//			because other processes run at the same time too, preempting our thread
-	for (int t = 0; t < 20; t++) {
-		MVM_default();
+	for (int t = 0; t < 2; t++) {
+		//MVM_default();
 		//MVM_SSE();
 		//MVM_AVX();
 	}
+	MMM_default();
 
 
 
@@ -59,7 +61,7 @@ int main() {
 
 	//printf(" clock() method: %ldms\n", (end_1 - start_1) / (CLOCKS_PER_SEC / 1000));
 	std::chrono::duration<double> elapsed = finish - start;
-	std::cout << "Elapsed time: " << elapsed.count() << " s\n";
+	std::cout << "Complete.\nElapsed time: " << elapsed.count() << " s\n";
 
 	system("pause");
 	return 0;
@@ -69,8 +71,10 @@ int main() {
 void initialization() {
 
 	for (int i = 0; i != M; i++)
-		for (int j = 0; j != M; j++)
+		for (int j = 0; j != M; j++) {
 			A[i][j] = (float)(i - j);
+			B[i][j] = (float)(i - j);
+		}
 
 	for (int j = 0; j != M; j++) {
 		Y[j] = 0.0;
@@ -139,12 +143,15 @@ void MVM_AVX() {
 
 //arrays need to be defined by you...
 void MMM_default() {
-	/*
-	for (int i = 0; i < M; i++)
-		for (int j = 0; j < M; j++)
+	int max = 16;
+
+	for (int i = 0; i < max; i++) {
+		std::cout << (i+1) << "/" << max << "\n";
+		for (int j = 0; j < M; j++) 
 			for (int k = 0; k < M; k++)
 				C[i][j] += A[i][k] * B[k][j];
-				*/
+		}
+				
 }
 
 //arrays need to be defined by you...
